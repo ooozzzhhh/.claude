@@ -1,0 +1,26 @@
+{
+  "mcpServers": {
+    "scp-test": {
+      "command": "C:/nodejs/npx.cmd",
+      "args": [
+        "-y",
+        "mcp-mysql-server",
+        "--host=10.7.60.157",
+        "--port=3306",
+        "--user=scp_ips",
+        "--password=scp_ips"
+      ]
+    },
+    "scp-prod": {
+      "command": "C:/nodejs/npx.cmd",
+      "args": [
+        "-y",
+        "mcp-mysql-server",
+        "--host=10.7.60.158",
+        "--port=3306",
+        "--user=scp_ips",
+        "--password=scp_ips"
+      ]
+    }
+  }
+}
