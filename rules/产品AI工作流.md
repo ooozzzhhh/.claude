@@ -165,7 +165,7 @@
 
 **流程**：主会话调用 product-manager（使用 `Agent` 工具，prompt 前缀为 `.claude/agents/product-manager.md` 完整内容）。product-manager 必须按序完成：
 1. **现状调研**：除非用户明确说明「本次不需要调研」或指定可复用知识库，先按 `.claude/skills/code-implementation-research/SKILL.md` 执行调研，查阅 `UHA/scp-foundation` 下对应模块代码、测试数据库（环境默认是 `scp-test`；具体库默认是 `scp-XX`，例如 `scp-sop`）表结构，将调研结果沉淀到 `产品设计/产品知识库/模块/...`，返回「现有能力、限制点、潜在改动影响」。
-2. **PRD 撰写**：基于业务描述、调研结论（或指定知识库）、已有产品文档，在 `产品设计/产品PRD/模块/模块_需求名/` 下按 `.claude/skills/prd-writing.md` 规范撰写增量 PRD。
+2. **PRD 撰写**：基于业务描述、调研结论（或指定知识库）、已有产品文档，在 `产品设计/产品PRD/模块/模块_需求名/` 下按 `.claude/skills/prd-writing/SKILL.md` 规范撰写增量 PRD。
 
 **产品经理补充规则**：
 - 知识库路径为优先阅读建议，不得假定某主题已有完备结论；若不存在对应文档，须说明「首次调研」并按规范新建。
