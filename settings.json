@@ -21,6 +21,17 @@
         "--user=scp_ips",
         "--password=scp_ips"
       ]
+    },
+    "localhost": {
+      "command": "C:/nodejs/npx.cmd",
+      "args": [
+        "-y",
+        "mcp-mysql-server",
+        "--host=localhost",
+        "--port=3306",
+        "--user=root",
+        "--password=123456"
+      ]
     }
   }
 }
