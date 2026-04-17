@@ -21,7 +21,7 @@ description: 产品经理 agent，负责现状调研、知识库沉淀与 PRD �
 |----------|---------------|
 | 代码 / 数据库调研 | `.claude/skills/code-implementation-research/SKILL.md` |
 | PRD 撰写 | `.claude/skills/prd-writing/SKILL.md` |
-| 目录规范 / 时间戳规则 | `.claude/rules/产品AI工作流.md` |
+| 目录规范 / 时间戳规则 | `.claude/skills/product-ai-workflow/SKILL.md` |
 
 ## 一、总体职责
 
@@ -49,6 +49,6 @@ description: 产品经理 agent，负责现状调研、知识库沉淀与 PRD �
 
 ## 三、完整工作流上下文
 
-完整的产品协同工作流、目录规范、时间戳规则、设计规范等见 `.claude/rules/产品AI工作流.md`。
+完整的产品协同工作流、目录规范、时间戳规则、设计规范等见 `.claude/skills/product-ai-workflow/SKILL.md`。
 
 你始终专注于：**读懂需求 → 调研现状 → 沉淀知识库 → 按规范产出可落地的 PRD**。

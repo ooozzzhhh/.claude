@@ -1,6 +1,16 @@
-# 产品 AI 协同工作流与设计规则
+---
+name: product-ai-workflow
+description: >-
+  Orchestrates the UHA product AI workflow (PRD → prototype → test cases → design review),
+  main-session vs subagent boundaries, directory layout, timestamp folders, and stage gates.
+  Use when the user or task involves product collaboration, 产品设计, PRD/prototype/用例/审核
+  pipelines, product-manager / product-frontend-designer / product-test-manager / product-reviewer
+  agents, or enforcing handoff rules between those stages.
+---
 
-本文件定义产品 AI 协同工作流的流程编排规则与全局规范约定。角色专属的执行细则（输出格式、存储规则、设计准则等）以各 agent 文件为权威来源，本文件不重复维护。
+# 产品 AI 协同工作流与设计规范
+
+本 skill 定义产品 AI 协同工作流的流程编排与全局规范约定。角色专属的执行细则（输出格式、存储规则、设计准则等）以各 agent 文件为权威来源，本 skill 不重复维护。
 
 ---
 
@@ -10,9 +20,9 @@
 
 | 项目 | 说明 |
 |------|------|
-| 工作区根目录 | `C:\Users\OZH\Desktop\UHA`（非 Git 仓库） |
-| 代码仓库根 | `C:\Users\OZH\Desktop\UHA\scp-foundation`（Maven 多模块，Java 后端） |
-| 产品设计工作目录 | `C:\Users\OZH\Desktop\UHA\产品设计\` |
+| 工作区根目录 | 本仓库（UHA）根目录；绝对路径随本机克隆位置而定 |
+| 代码仓库根 | `scp-foundation/`（相对工作区根，Maven 多模块，Java 后端） |
+| 产品设计工作目录 | `产品设计/`（相对工作区根） |
 
 调用产品经理做代码调研时，如未特别说明，主会话默认以 `scp-foundation` 子目录为代码仓库根目录。若需求文档指出代码位于其他仓库/分支，主会话须在调用时显式传递；若无法访问指定位置，须向 subagent 说明限制，要求在调研结论中标注「仅基于当前可见代码/数据的初步结论」。
 
@@ -23,7 +33,7 @@
 | 序号 | 原则 | 说明 |
 |------|------|------|
 | 1 | **主会话只负责分发，不参与执行** | 主会话仅负责理解需求、调用 subagent、传递上下文、转达摘要与待决策点；不得代替 subagent 撰写 PRD、编写调研、产出原型、编写用例、撰写审核报告或直接修改产品设计目录下的文档。所有可交付产出均由相应 subagent 完成。 |
-| 2 | **严禁自创角色/任务** | 产品相关 AI 只允许以本文件约定的 4 个 subagent 身份工作，不得额外发明如「实现落地建议」「开发任务拆解」等新角色或新阶段。若确有需要，须在用户明确要求后，以「普通说明文字」形式输出。 |
+| 2 | **严禁自创角色/任务** | 产品相关 AI 只允许以本 skill 约定的 4 个 subagent 身份工作，不得额外发明如「实现落地建议」「开发任务拆解」等新角色或新阶段。若确有需要，须在用户明确要求后，以「普通说明文字」形式输出。 |
 | 3 | **阶段间必须有用户硬确认** | 从「PRD → 原型」「原型 → 用例」「用例 → 审核」的每一次跃迁，须先由主会话以明确语句确认，AI 才能自动执行下一步。仅说「继续」「往下走」不视为阶段签收。 |
 | 4 | **阶段结束必须显式提醒签收** | 每个阶段结束时，AI 须用清晰话术提示用户「请先检查什么」「确认什么后才会进入下一阶段」，不得在用户尚未显式签收时自动推进。 |
 
@@ -92,7 +102,7 @@
 
 - 路径：`产品设计/产品问题分析/模块/模块_BUG_yy-mm-dd_xx/`（如 `SOP_BUG_2026-03-03_01`）
 - 用途：存放问题分析报告及其附属材料
-- 建档规则见 product-test-manager.md
+- 建档规则见 `product-test-manager` agent 文件
 
 #### 3.1.7 时间戳子目录与功能历史（强制规范）
 
@@ -126,7 +136,7 @@
 | AMS | SCH | AMS |
 | 其它 | MDS、SDS、IPS、MRP、MPS、DFP | 不得混用 |
 
-若未来新增模块，须先在本规则中补充模块编码后，方可在 `产品设计/产品XXX/模块` 创建对应目录。
+若未来新增模块，须先在本 skill 中补充模块编码后，方可在 `产品设计/产品XXX/模块` 创建对应目录。
 
 ---
 
@@ -230,7 +240,7 @@
 **流程**：
 - 主会话调用 product-manager 对相关代码与数据库进行调研，将结论沉淀到知识库。
 - 主会话再调用 product-test-manager 基于知识库与问题描述完成问题分析报告。
-- 建档询问与目录创建规则见 product-test-manager.md。
+- 建档询问与目录创建规则见 product-test-manager agent 文件。
 
 **产出物**：问题分析报告（现状 / 问题 / 解决方案三大章节）、知识库更新。
 

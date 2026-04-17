@@ -47,8 +47,8 @@ SCP Foundation 是供应链计划平台，采用微服务架构。模块与端�
 
 ### 2.1 代码根目录
 
-- **工作区根**：`C:\Users\OZH\Desktop\UHA`
-- **代码仓库根**：`UHA/scp-foundation`（Maven 多模块项目根目录）
+- **工作区根**：本仓库（UHA）根目录；绝对路径随本机克隆位置而定
+- **代码仓库根**：`scp-foundation/`（相对工作区根，Maven 多模块项目根目录）
 - 若主会话或需求文档指定其他路径/分支，以指定为准。
 
 ### 2.2 Maven 模块分层（scp-{service}-{layer}）
