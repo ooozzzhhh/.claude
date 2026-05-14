@@ -22,18 +22,7 @@
         "--password=scp_ips"
       ]
     },
-    "scp-test17": {
-      "command": "/usr/local/bin/npx",
-      "args": [
-        "-y",
-        "mcp-mysql-server",
-        "--host=10.7.60.115",
-        "--port=3306",
-        "--user=scp_ips",
-        "--password=scp_ips"
-      ]
-    },
-    "scp-upgrade": {
+    "scp-prod17/scp-test17": {
       "command": "/usr/local/bin/npx",
       "args": [
         "-y",
@@ -53,6 +42,17 @@
         "--port=3306",
         "--user=root",
         "--password=ozh123456"
+      ]
+    },
+    "poc": {
+      "command": "/usr/local/bin/npx",
+      "args": [
+        "-y",
+        "mcp-mysql-server",
+        "--host=10.7.60.155",
+        "--port=3306",
+        "--user=scp_ips",
+        "--password=scp_ips"
       ]
     }
   }
