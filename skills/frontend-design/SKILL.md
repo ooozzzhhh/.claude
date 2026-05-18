@@ -1,3 +1,8 @@
+---
+name: frontend-design
+description: 前端设计准则。用于创建有独特风格、生产可用的前端界面，覆盖网页组件、页面、原型、仪表盘、HTML/CSS 布局，或对任何 web UI 进行美化设计。产品前端设计师在产品 AI 工作流中生成 HTML 原型时调用；含 B2B 供应链场景的专属约束。
+---
+
 # Frontend Design Skill — 前端设计准则
 
 使用本 skill 创建有独特风格、生产可用的前端界面。适用于构建网页组件、页面、原型、仪表盘、HTML/CSS 布局，或对任何 web UI 进行美化设计。
